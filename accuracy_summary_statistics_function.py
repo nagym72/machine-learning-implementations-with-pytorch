@@ -9,7 +9,7 @@ def ex6(logits:torch.tensor, activation_function:callable, threshold:any, target
     :param activation_function: The function that is used to classify the category. Will take as input logits and return a value between 0 < threshold < 1.
     :param threshold: The threshold that is used to decide if a sample belongs to class A or B (binary classification
     :param targets: An array containing the labels of the classed which are to be predicted
-    :return:
+    :return: (confusion_matrix:nested_list, F1_score:float, accuracy:float, balanced_accuracy:float)
     """
 
     #check if input array is of correct type
